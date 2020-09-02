@@ -1,0 +1,12 @@
+pg_ctl -D /usr/local/var/postgres start
+
+Migrations: 
+yarn add typeorm pg
+
+yarn typeorm migration:create -n CreateLink
+
+$ yarn typeorm migration:run
+
+$ yarn typeorm migration:revert // desfazer migration
+
+$ yarn typeorm migration:show 
