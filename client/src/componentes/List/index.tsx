@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Content, Title, ListContent, Ulr } from './styles';
-import api from '../../services/api';
 
 import heart from '../../assets/heart-emoji.png'
 import twitter from '../../assets/twitter-logo.png'
@@ -15,17 +14,17 @@ interface UrlData {
     updated_at: Date;
 }
 
-const List: React.FC = () => {
+interface PropsData {
+    urldata: Array<UrlData>;
+}
+
+const List: React.FC<PropsData> = (props) => {
 
     const [urls, setUrl] = useState<UrlData[]>([])
 
     useEffect(() => {
-        api.get('/').then(response => {
-            console.log(response.data)
-
-            setUrl(response.data)
-        })
-    }, [])
+        setUrl(props.urldata)
+    }, [props.urldata])
 
 
     return (
@@ -44,7 +43,7 @@ const List: React.FC = () => {
                 </ListContent>
             </Content>
             <footer>
-                <div><p>Made with </p> <img src={heart} alt="" /> <p>by Interlink</p></div>
+                <div><p>Made with </p> <img src={heart} alt="heart" /> <p>by Interlink</p></div>
                 <a href="www.twitter.com"><img src={twitter} alt="twitter" /></a>
             </footer>
         </Container>

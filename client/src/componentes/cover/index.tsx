@@ -1,4 +1,4 @@
-import React, { useCallback, FormEvent, useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 // import { IconBaseProps } from 'react-icons';
 import { Container, Logo, Content, Title, Subtitle, Input, Button, InputDiv } from './styles';
 import api from '../../services/api';
@@ -13,7 +13,9 @@ interface UrlData {
     updated_at: Date;
 }
 
+
 const Cover: React.FC = () => {
+
 
     const [inputValue, setInputValue] = useState('')
 
@@ -30,6 +32,7 @@ const Cover: React.FC = () => {
 
         setInputValue(link.shortUrl)
     }
+
 
     return (
         <Container>
