@@ -50,6 +50,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
     color: #f9f2f2;
+    color: #fff0f2;
     /* max-width: 500px; */
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
@@ -83,7 +84,8 @@ export const Button = styled.button`
     width: auto;
     padding: 6px 16px;
     background: #f6435d;
-    color: #f9f2f2;
+    /* color: #f9f2f2; */
+    color: #fff0f2;
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 0 4px 4px 0;

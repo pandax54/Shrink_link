@@ -62,7 +62,7 @@ export const ListContent = styled.div`
 export const Ulr = styled.div`
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(246, 67, 93, 0.4);
+    border-bottom: 1px solid #fff0f2;
     padding-bottom: 10px;
     margin-bottom: 10px;
     margin-top: 30px;
